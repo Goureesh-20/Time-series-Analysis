@@ -1,0 +1,17 @@
+from flask import Flask, render_template
+from board import board
+
+app = Flask(__name__)
+
+@app.route("/")
+
+def home():
+    # This variable will hold the stock data
+    stock_data = {}
+
+    return render_template("index.html", stock_data=stock_data)
+
+if __name__ == '__main__':
+    app.run(debug=True, port=8000)
+
+

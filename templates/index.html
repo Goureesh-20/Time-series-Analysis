@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stock Data Visualization</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.2/dist/chart.umd.min.js"></script>
+</head>
+<body>
+    <h1>Stock Data Visualization</h1>
+    <canvas id="stockChart" width="800" height="400"></canvas>
+
+    <script src="../static/closedata.js"></script>
+    <script>
+        var ctx = document.getElementById('stockChart').getContext('2d');
+
+        // var dates = stockData["AAPL"].map(data => data.date);
+        // var closeValues = stockData["AAPL"].map(data => data.close);
+        
+        // Create an array to store all datasets
+        var datasets = [];
+
+        // Loop through each company's data in stockData
+        for (var company in stockData) {
+            var companyData = stockData[company];
+            var dates = companyData.map(data => data.date);
+            var closeValues = companyData.map(data => data.close);
+
+            // Create a dataset for the current company
+            var dataset = {
+                label: company + ' Stock Price',
+                data: closeValues,
+                borderColor: getRandomColor(), // You can define this function to get random colors
+                borderWidth: 1,
+                fill: false,
+                pointRadius: 0,
+            };
+
+            // Add the dataset to the datasets array
+            datasets.push(dataset);
+        }
+
+
+
+        // Create the line chart
+        var stockChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: dates,
+                datasets: datasets,
+            },
+            options: {
+                responsive: false,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: false
+                    }
+                }
+            }
+        });
+        // Function to get random colors for datasets
+        function getRandomColor() {
+            var letters = '0123456789ABCDEF';
+            var color = '#';
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+    </script>
+</body>
+</html>
