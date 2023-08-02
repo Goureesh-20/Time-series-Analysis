@@ -1,0 +1,22 @@
+/* CSS for the chart containers */
+.chart-container {
+    margin-bottom: 30px; /* Add some bottom margin to create a gap between charts */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* CSS for the chart headings */
+  .chart-container h2 {
+    margin-top: 0;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  /* Optional: If you want the charts to have a fixed height */
+  .chart-container canvas {
+    height: 300px; /* Adjust the height as needed */
+  }
+  
