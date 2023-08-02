@@ -119,7 +119,7 @@ var closeChart = new Chart(ctx1, {
         datasets: close_datasets,
     },
     options: {
-        responsive: false,
+        responsive: true,
         maintainAspectRatio: false,
         scales: {
             x: {
@@ -146,7 +146,7 @@ var cumulativeChart = new Chart(ctx2, {
         datasets: cumulative_datasets,
     },
     options: {
-        responsive: false,
+        responsive: true,
         maintainAspectRatio: false,
         scales: {
             x: {
@@ -173,7 +173,7 @@ var marketChart = new Chart(ctx3, {
         datasets: market_change_datasets,
     },
     options: {
-        responsive: false,
+        responsive: true,
         maintainAspectRatio: false,
         scales: {
             x: {
@@ -200,7 +200,7 @@ var movingAvgChart = new Chart(ctx4, {
         datasets: moving_average_datasets,
     },
     options: {
-        responsive: false,
+        responsive: true,
         maintainAspectRatio: false,
         scales: {
             x: {
@@ -227,7 +227,7 @@ var volumeChart = new Chart(ctx5, {
         datasets: volume_datasets,
     },
     options: {
-        responsive: false,
+        responsive: true,
         maintainAspectRatio: false,
         scales: {
             x: {
