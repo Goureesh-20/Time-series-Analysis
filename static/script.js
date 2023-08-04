@@ -243,7 +243,10 @@ var volumeChart = new Chart(ctx5, {
             y: {
                 beginAtZero: false
             }
-        }
+        },
+        legend: {
+            fontSize: 10
+          }
     }
 });
 // Function to get random colors for datasets

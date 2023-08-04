@@ -5,50 +5,79 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
 <body>
-    <nav>
-        <h1>Stock Data Visualization</h1>
-    </nav>
 
-    <h2 style="margin: 2rem;"> Why we chose these companies</h2>
-    <p>Each chosen company represents a significant sector, allowing us to present a comprehensive analysis of various market segments.</p>
+    <header class="header"></header>
 
-    <p>
-        <strong>Apple (AAPL)</strong> was chosen to represent the technology sector, as it is a global leader in innovative consumer electronics, software, and digital services. Its immense influence on the technology landscape makes it an ideal candidate for illustrating the growth and impact of the tech industry.
+    <section class="sidebar"></section>
 
-<br><br><strong>Coca-Cola (KO)</strong> was selected to represent the consumer goods sector, as it is one of the most iconic and recognizable beverage brands worldwide. Analyzing Coca-Cola's market performance can offer valuable insights into consumer trends and the demand for consumer goods.
+    <main class="main">
+        <div class="card">
+            <canvas id="closeChart" width="800" ></canvas>
+        </div>
 
-<br><br><strong>Exxon Mobil (XOM)</strong> represents the energy sector, one of the foundational pillars of the global economy. As one of the largest multinational oil and gas corporations, Exxon Mobil's data can provide a glimpse into the dynamics of the energy market and its impact on the economy.
+        <div class="card">
+            <canvas id="cumulativeChart" width="800" height="400"></canvas>
+        </div>
 
-<br><br><strong>Simon Property (SPG)</strong> represents the real estate sector, particularly in the context of commercial properties and shopping malls. Understanding Simon Property's data can shed light on the performance of the real estate market and its correlation with economic indicators.
+        <div class="card">
+            <canvas id="marketChart" width="800" height="400"></canvas>
+        </div>
 
-<br><br><strong>Johnson and Johnson (JNJ)</strong>was chosen to represent the healthcare sector. Being a prominent pharmaceutical and consumer goods company, Johnson and Johnson's data can offer valuable insights into the dynamics of the healthcare industry and its responses to various market conditions.
+        <div class="card">
+            <h2 style="margin: 2rem;"> Why we chose these companies</h2>
+            <p>Each chosen company represents a significant sector, allowing us to present a comprehensive analysis of various market segments.</p>
 
-<br><br><strong>Toyota (TM)</strong> was selected to represent the automobile sector, as it is one of the largest and most renowned automobile manufacturers globally. Analyzing Toyota's market performance can provide valuable insights into the automotive industry's trends and innovations.
-    </p>
-    <div class="chart-container">
-        <h2>Market Closing</h2>
-        <canvas id="closeChart" width="800" ></canvas>
-    </div>
+            <p>
+                <strong>Apple (AAPL)</strong> was chosen to represent the technology sector, as it is a global leader in innovative consumer electronics, software, and digital services. Its immense influence on the technology landscape makes it an ideal candidate for illustrating the growth and impact of the tech industry.
 
-    <div class="chart-container">
-        <h2>Market cummulative change</h2>    
-        <canvas id="cumulativeChart" width="800" height="400"></canvas>
-    </div>
+                <br><br><strong>Coca-Cola (KO)</strong> was selected to represent the consumer goods sector, as it is one of the most iconic and recognizable beverage brands worldwide. Analyzing Coca-Cola's market performance can offer valuable insights into consumer trends and the demand for consumer goods.
 
-    <div class="chart-container">
-        <h2>Market Cap</h2>
-        <canvas id="marketChart" width="800" height="400"></canvas>
-    </div>
+                <br><br><strong>Exxon Mobil (XOM)</strong> represents the energy sector, one of the foundational pillars of the global economy. As one of the largest multinational oil and gas corporations, Exxon Mobil's data can provide a glimpse into the dynamics of the energy market and its impact on the economy.
 
-    <div class="chart-container">
-        <h2>Market moving average</h2>
-        <canvas id="movingAvgChart" width="800" height="400"></canvas>
-    </div>
+                <br><br><strong>Simon Property (SPG)</strong> represents the real estate sector, particularly in the context of commercial properties and shopping malls. Understanding Simon Property's data can shed light on the performance of the real estate market and its correlation with economic indicators.
 
-    <div class="chart-container">
-        <h2>Market volume</h2>
-        <canvas id="volumeChart" width="800" height="400"></canvas>
-    </div>
+                <br><br><strong>Johnson and Johnson (JNJ)</strong>was chosen to represent the healthcare sector. Being a prominent pharmaceutical and consumer goods company, Johnson and Johnson's data can offer valuable insights into the dynamics of the healthcare industry and its responses to various market conditions.
+
+                <br><br><strong>Toyota (TM)</strong> was selected to represent the automobile sector, as it is one of the largest and most renowned automobile manufacturers globally. Analyzing Toyota's market performance can provide valuable insights into the automotive industry's trends and innovations.
+            </p>
+        </div>
+
+        <div class="card">
+            <canvas id="movingAvgChart" width="800" height="400"></canvas>
+        </div>
+
+        <div class="card">
+            <canvas id="volumeChart" width="800" height="400"></canvas>
+        </div>
+
+        
+        <!-- <div class="chart-container">
+            <h2>Market Closing</h2>
+            <canvas id="closeChart" width="800" ></canvas>
+        </div>
+
+        <div class="chart-container">
+            <h2>Market cummulative change</h2>    
+            <canvas id="cumulativeChart" width="800" height="400"></canvas>
+        </div>
+
+        <div class="chart-container">
+            <h2>Market Cap</h2>
+            <canvas id="marketChart" width="800" height="400"></canvas>
+        </div>
+
+        <div class="chart-container">
+            <h2>Market moving average</h2>
+            <canvas id="movingAvgChart" width="800" height="400"></canvas>
+        </div>
+
+        <div class="chart-container">
+            <h2>Market volume</h2>
+            <canvas id="volumeChart" width="800" height="400"></canvas>
+        </div> -->
+    </main>
+
+    
 
 
     <!-- Script tags for JavaScript files -->

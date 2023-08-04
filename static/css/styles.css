@@ -1,5 +1,14 @@
 /* Reset some default styles */
-body,nav{
+
+body {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 150px  1fr;
+    grid-template-rows: 60px 1fr;
+    grid-template-areas: 
+        "side header"
+        "side main"
+        ;
     margin: 0;
 }
 
@@ -7,22 +16,88 @@ body,nav{
     font-family: 'MyFont';
     src: url('/static/fonts/myfont.ttf') format('truetype');
   }
-  
-  
-  
-/* Style the navbar */
-nav {
-background-color: #333; /* Dark color for the navbar */
-color: #fff; /* Text color for the navbar items */
-text-align: center; /* Center the items in the navbar */
-padding: 10px; /* Add some padding around the navbar items */
-font-family: 'MyFont', Arial, sans-serif;
+
+.header {
+    background-color: #fff;
+    /* grid-column: 1 / 3;
+    grid-row: 1/ 2; */
+    grid-area: header;
+
+}
+.sidebar {
+    background-color: #1c1f23;
+    /* grid-column: 1/2;
+    grid-row: 1/3; */
+    grid-area: side;
 }
 
+.main{
+    background-color: #c3c5ca;
+    padding: 25px;
+    /* grid-column: 2/3;
+    grid-row: 2/3; */
+    grid-area: main;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 10px;
+    grid-template-areas: 
+        "g1 g2 g3"
+        "about about g4"
+        "about about g5"
+        ;
+}
+
+.card{
+    background-color: white;
+}
+  
+.card:not(:nth-child(4)){
+    height: 15rem;
+    width: 25rem;
+}
+
+.card:nth-child(1) {
+    grid-area: g1;
+    
+}
+
+.card:nth-child(2) {
+    grid-area: g2;
+}
+
+.card:nth-child(3) {
+    grid-area: g3;
+}
+
+.card:nth-child(4) {
+    grid-area: about;
+}
+
+.card:nth-child(5) {
+    grid-area: g4;
+}
+
+.card:nth-child(6) {
+    grid-area: g5;
+}
+
+@media (max-width: 925px) {
+    .main{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 400px);
+        grid-template-areas: initial;
+    }
+
+    .card{
+        grid-area: initial !important;
+    }
+}
 
 /* Style the heading in the center */
 h1 {
-color: white; /* White text */
+color: #000; /* White text */
 margin: 0;
 font-family: 'MyFont', Arial, sans-serif;
 }
@@ -33,7 +108,6 @@ h2{
 }
 p {
 font-family: 'MyFont', Arial, sans-serif;
-margin: 2rem;
 }
 
 /* CSS for the chart containers */
@@ -45,8 +119,7 @@ border-radius: 5px;
 background-color: #f9f9f9;
 box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 height: 300px;
-margin-right: 2rem;
-margin-left: 2rem;
+
 }
 
 /* CSS for the chart headings */
