@@ -110,7 +110,7 @@ for (var company in volumeData) {
     volume_datasets.push(dataset);
 }
 
-
+Chart.defaults.font.size = 9;
 // Create the line chart
 var closeChart = new Chart(ctx1, {
     type: 'line',
@@ -227,6 +227,11 @@ var volumeChart = new Chart(ctx5, {
         datasets: volume_datasets,
     },
     options: {
+        plugins:{
+            legend:{
+                display: false
+            }
+        },
         responsive: true,
         maintainAspectRatio: false,
         scales: {
@@ -244,9 +249,6 @@ var volumeChart = new Chart(ctx5, {
                 beginAtZero: false
             }
         },
-        legend: {
-            fontSize: 10
-          }
     }
 });
 // Function to get random colors for datasets
