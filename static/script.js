@@ -229,7 +229,7 @@ var volumeChart = new Chart(ctx5, {
     options: {
         plugins:{
             legend:{
-                display: false
+                display: true,
             }
         },
         responsive: true,
@@ -253,10 +253,10 @@ var volumeChart = new Chart(ctx5, {
 });
 // Function to get random colors for datasets
 function getRandomColor() {
-    var letters = '0123456789ABCDEF';
-    var color = '#';
-    for (var i = 0; i < 6; i++) {
-        color += letters[Math.floor(Math.random() * 16)];
-    }
-    return color;
+    var hue = Math.floor(Math.random() * 360); // Generate random hue value (0-359)
+    var saturation = 50; // Set saturation to 50%
+    var lightness = 60 + Math.floor(Math.random() * 20); // Generate lightness between 60 and 80
+
+    return `hsl(${hue}, ${saturation}%, ${lightness}%)`;
 }
+
