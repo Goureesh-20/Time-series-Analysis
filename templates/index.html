@@ -3,17 +3,31 @@
 <head>
     <title>Stock Data Visualization</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
 </head>
 <body>
 
     <header class="header"></header>
 
-    <section class="sidebar"></section>
+    <section class="sidebar">
+        <div class="sidebar-item">
+            <i class="fas fa-chart-line"></i> <!-- Font Awesome icon -->
+            <p>Dashboard</p>
+        </div>
+        <div class="sidebar-item">
+            <i class="fas fa-users"></i> <!-- Another Font Awesome icon -->
+            <p>Users</p>
+        </div>
+    </section>
 
-    <main class="main">
+    <main class="main" id="main">
         <div class="card" data-hover-text="Close Chart">
             <div class="chart-div">
                 <canvas id="closeChart" width="800" ></canvas>
+            </div>
+            <div>
+                <h1>Expanded Here</h1>
             </div>
         </div>
 
@@ -100,6 +114,7 @@
     <script src="{{ url_for('static', filename='movingAverage.js') }}"></script>
     <script src="{{ url_for('static', filename='volumedata.js') }}"></script>
     <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <script src="{{ url_for('static', filename='card-component.js') }}"></script>
 
 
 </body>

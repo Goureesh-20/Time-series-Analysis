@@ -26,10 +26,29 @@ body {
 }
 .sidebar {
     background-color: #1c1f23;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     /* grid-column: 1/2;
     grid-row: 1/3; */
     grid-area: side;
 }
+
+/* CSS for changing icon colors */
+.sidebar-item i {
+    color: #fff; /* Change to your desired color */
+    font-size: 30px; 
+}
+
+
+.sidebar-item {
+    display: flex;
+    align-items: center; /* Vertically center items */
+    padding: 10px;
+    margin-top: 10px;
+    color: white;
+}
+
 
 .main{
     background-color: #c3c5ca;
@@ -55,12 +74,16 @@ body {
     
 } */
 
+
+
+
 .card {
     background-color: white;
     border-radius: 0.5rem;
     position: relative; /* To contain the ::before pseudo-element */
     overflow: hidden; /* To clip the gradient within the element */
-  }
+    transition: width 0.5s, height 0.5s, transform 0.5s;
+}
   
 .card::before {
 content: attr(data-hover-text);; /* Text that appears when hovered */
@@ -145,7 +168,7 @@ h2{
 }
 p {
 font-family: 'MyFont', Arial, sans-serif;
-font-size: 14px;
+font-size: 18px;
 margin: 14px;
 }
 
