@@ -18,12 +18,19 @@ body {
   }
 
 .header {
+    display: flex;
+    justify-content: center; /* Horizontally center */
+    align-items: center; /* Vertically center */
+    font-family: 'MyFont', Arial, sans-serif;
     background-color: #fff;
     /* grid-column: 1 / 3;
     grid-row: 1/ 2; */
     grid-area: header;
+    
 
 }
+
+
 .sidebar {
     background-color: #1c1f23;
     display: flex;
@@ -166,11 +173,18 @@ h2{
     font-family: 'MyFont', Arial, sans-serif;
 
 }
+
 p {
 font-family: 'MyFont', Arial, sans-serif;
 font-size: 18px;
 margin: 14px;
 }
+
+@media (max-width: 768px) {
+    p {
+      font-size: 11px; /* Adjust the font size for smaller screens */
+    }
+  }
 
 /* CSS for the chart containers */
 .chart-container {
